@@ -1,25 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import { NavBar } from "./navBar";
+import { Login } from "./login";
+import $ from 'jquery';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export const App = (props) => {
 
-export default App;
+ const fadeOut=()=>{
+  console.log("hi")
+         $(".fade-sent").fadeIn('fast').delay(1000).fadeOut('fast');
+       
+      }
+  switch (props.page) {
+    case 0:
+      return(
+        <div className="App">
+          <NavBar props={props}></NavBar>
+          <div className="main-view">  
+            <p>{props.quote.text}</p>
+          </div>
+        </div>
+      )
+      
+      
+    case 1:
+     
+     
+    return(
+
+      <div className="App">
+         <NavBar props={props}></NavBar>
+        <div className="main-view">
+<div className="fade-sent"><p>SENT</p></div>
+          <div onClick={()=>fadeOut()} className="circle">Press</div>
+        </div>
+        
+      </div>
+    )
+
+    case 2:
+      return(
+        <div className="App">
+   <NavBar props={props}></NavBar> 
+   <Login props={props}></Login>
+        </div>
+       
+      )
+      break;
+  
+    default:
+      break;
+  }
+   
+    
+    
+    
+ 
+};

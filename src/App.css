@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+html, body ,#root{
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: black;
+
+}
+nav{
+    background-color: #ff007b;
+    display:flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+.nav h2 ,p{
+    margin: 0px;
+}
+.App{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-view{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.circle{
+    width: 193px;
+    height: 193px;
+    border: 1px solid;
+    border-radius: 64%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#ff007b ;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.circle:hover{
+    background-color:black;
+    color: #ff007b;
+}
+.fade-sent{
+    position: absolute;
+    margin-top: -60%;
+    margin-left: -78%;
+    width: 15%;
+    background: green;
+    border: 2px solid;
+    border-radius: 20px;
+    padding: 10px;
+  text-align: right;
+  display: none;
+
+
+}
+.login-con input{
+  margin-bottom: 10px;
+}
+.btn{
+  background-color: #ff007b;
   color: white;
+  margin-top: 10px;
+}
+.login-btn{
+  display: flex;
+  justify-content: end;
+}
+.btn:hover{
+  background-color: black;
+  border: 1px solid #ff007b;
+  color: #ff007b;
+}
+.logout-con{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+.logout-con button{
+  margin: 0px;
+  border: 1px solid white;
+  margin-left: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+
+@media screen and (max-width: 480px) {
+nav h2{
+  font-size: 1.3rem;}
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
