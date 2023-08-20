@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/dopeaffirmations/static/css/main.562d95ba.css",
-    "main.js": "/dopeaffirmations/static/js/main.c4eb31b2.js",
+    "main.js": "/dopeaffirmations/static/js/main.0a091ff1.js",
     "static/js/787.187720cf.chunk.js": "/dopeaffirmations/static/js/787.187720cf.chunk.js",
     "index.html": "/dopeaffirmations/index.html",
     "main.562d95ba.css.map": "/dopeaffirmations/static/css/main.562d95ba.css.map",
-    "main.c4eb31b2.js.map": "/dopeaffirmations/static/js/main.c4eb31b2.js.map",
+    "main.0a091ff1.js.map": "/dopeaffirmations/static/js/main.0a091ff1.js.map",
     "787.187720cf.chunk.js.map": "/dopeaffirmations/static/js/787.187720cf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.562d95ba.css",
-    "static/js/main.c4eb31b2.js"
+    "static/js/main.0a091ff1.js"
   ]
 }
