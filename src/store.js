@@ -26,7 +26,7 @@ const scheduleNotification = () => {
     Notification.requestPermission().then(permission => {
       if (permission === "granted") {
         const now = new Date();
-        const timeUntil8AM = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 13, 55, 0) - now;
+        const timeUntil8AM = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 14, 36, 0) - now;
 
         if (timeUntil8AM > 0) {
           setTimeout(() => {
