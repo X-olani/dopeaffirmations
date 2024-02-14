@@ -5,10 +5,10 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
       return cache.addAll([
-        '/',
-        './index.html',
-        './manifest.json',
-        './DFicon.png',
+        '/dopeaffirmations/',
+        '/dopeaffirmations/index.html',
+        '/dopeaffirmations/manifest.json',
+        '/dopeaffirmations/DFicon.png',
         // Add other static assets you want to cache
       ]);
     })
