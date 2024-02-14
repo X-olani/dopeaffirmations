@@ -5,17 +5,22 @@ import { Login } from "./login";
 import $ from 'jquery';
 
 export const App = (props) => {
+ 
+  
 
  const fadeOut=()=>{
   console.log("hi")
          $(".fade-sent").fadeIn('fast').delay(1000).fadeOut('fast');
        
       }
+
+      
   switch (props.page) {
     case 0:
       return(
         <div className="App">
           <NavBar props={props}></NavBar>
+          
           <div className="main-view">  
             <p>{props.quote.text}</p>
           </div>

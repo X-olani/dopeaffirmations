@@ -8,6 +8,13 @@ import { store ,SendAuth} from "./store";
 import { Component } from "./components";
 import { Provider } from "react-redux";
 
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("./service-worker.js")
+    .then(function () {
+      console.log("Service Worker Registered");
+    });}
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
@@ -20,3 +27,5 @@ store.dispatch(SendAuth())
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+

@@ -5,6 +5,8 @@ import { Affirmations } from "./texts.js";
 import {signInWithEmailAndPassword,onAuthStateChanged, signOut} from "firebase/auth";
 import {auth} from './firebaseConfig.js';
 
+import React, { useEffect } from 'react';
+import OneSignal from './onesignal'; // Path to your onesignal.js file
 
 
 
@@ -17,25 +19,28 @@ const initialState = {
   user:null
 };
 
-if ("Notification" in window) {
-  Notification.requestPermission();
-}
 
-const scheduleNotification = (state) => {
-  const now = new Date();
-  const timeUntil8AM =
-    new Date(now.getFullYear(), now.getMonth(), now.getDate(), 8, 0, 0) - now;
 
-  if (timeUntil8AM > 0) {
-    setTimeout(() => {
-      if (Notification.permission === "granted") {
-        new Notification(Affirmations[Math.floor(Math.random() * 22)].text, {
-          body: "Hey Kim.",
-        });
+const scheduleNotification = () => {
+  if ("Notification" in window) {
+    Notification.requestPermission().then(permission => {
+      if (permission === "granted") {
+        const now = new Date();
+        const timeUntil8AM = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 3, 52, 0) - now;
+
+        if (timeUntil8AM > 0) {
+          setTimeout(() => {
+            new Notification(Affirmations[Math.floor(Math.random() * 22)].text, {
+              body: "Hey Kim"
+            });
+          }, timeUntil8AM);
+        }
       }
-    }, timeUntil8AM);
+    });
   }
 };
+
+
 
 scheduleNotification();
 
