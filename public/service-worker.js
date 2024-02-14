@@ -1,4 +1,4 @@
-const CACHE_NAME = 'dopeaffirmation-v1';
+const CACHE_NAME = 'v1';
 
 // Cache static assets during installation
 self.addEventListener('install', event => {
@@ -6,9 +6,9 @@ self.addEventListener('install', event => {
     caches.open(CACHE_NAME).then(cache => {
       return cache.addAll([
         '/',
-        '/index.html',
-        '/manifest.json',
-        '/DFicon.png',
+        './index.html',
+        './manifest.json',
+        './DFicon.png',
         // Add other static assets you want to cache
       ]);
     })
